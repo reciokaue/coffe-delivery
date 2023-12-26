@@ -1,12 +1,10 @@
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { HeaderContainer } from './styles'
 
-import Logo from '../../../public/logo.svg'
-
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={Logo} alt="" />
+      <img src="/logo.svg" alt="" />
 
       <div>
         <button>

@@ -14,6 +14,11 @@ export const CoffeeCardContainer = styled.div`
 
   background: ${(props) => props.theme['base-card']};
 
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   img {
     width: 120px;
     height: 120px;

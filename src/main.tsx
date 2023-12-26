@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Home } from './pages/Home/index.tsx'
 import { App } from './App.tsx'
+import { Cart } from './pages/Cart/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: '/', element: <Home /> },
-      { path: '/cart', element: <Home /> },
+      { path: '/cart', element: <Cart /> },
       { path: '/order/:orderId/success', element: <Home /> },
     ],
   },

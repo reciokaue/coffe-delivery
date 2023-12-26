@@ -39,13 +39,14 @@ export const HeroContainer = styled.div`
 `
 export const Benefits = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   gap: 1.25rem;
 
   div {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 0.75rem;
 
     color: ${(props) => props.theme['base-text']};

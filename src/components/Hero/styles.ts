@@ -1,16 +1,7 @@
 import styled from 'styled-components'
 import { fonts } from '../../styles/fonts'
 
-export const Wrapper = styled.div`
-  img#hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-height: 544px;
-    width: 100vw;
-    object-fit: cover;
-  }
-`
+export const Wrapper = styled.div``
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -35,6 +26,13 @@ export const HeroContainer = styled.div`
     width: 29.75rem;
     height: 22.5rem;
     flex-shrink: 0;
+  }
+
+  img#hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    object-fit: cover;
   }
 `
 export const Benefits = styled.div`

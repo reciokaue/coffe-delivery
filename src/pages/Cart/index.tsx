@@ -1,4 +1,10 @@
-import { CurrencyDollar, MapPinLine } from 'phosphor-react'
+import {
+  Bank,
+  CreditCard,
+  CurrencyDollar,
+  MapPinLine,
+  Money,
+} from 'phosphor-react'
 import {
   Header,
   PaymentFooter,
@@ -6,6 +12,8 @@ import {
   AddressContainer,
   CartContainer,
   Input,
+  PaymentWrapper,
+  PaymentButton,
 } from './styles'
 
 export function Cart() {
@@ -39,6 +47,17 @@ export function Cart() {
               <p>Informe o endereço onde deseja receber seu pedido</p>
             </div>
           </Header>
+          <PaymentWrapper>
+            <PaymentButton value="credit">
+              <CreditCard /> Cartão de crédito
+            </PaymentButton>
+            <PaymentButton value="debit">
+              <Bank /> cartão de débito
+            </PaymentButton>
+            <PaymentButton value="money">
+              <Money /> dinheiro
+            </PaymentButton>
+          </PaymentWrapper>
         </PaymentFooter>
       </div>
       <div>

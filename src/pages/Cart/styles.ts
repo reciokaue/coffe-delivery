@@ -1,61 +1,42 @@
 import styled from 'styled-components'
 import { fonts } from '../../styles/fonts'
+import * as RadioGroup from '@radix-ui/react-radio-group'
 
 export const CartContainer = styled.div`
   display: flex;
   width: 100%;
   gap: 2rem;
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     width: 100%;
 
-    h2 {
+    > h2 {
       color: ${(props) => props.theme['base-subtitle']};
       ${fonts.titleXS}
     }
   }
-
-  section,
-  footer,
-  aside {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 2rem;
-    padding: 2.5rem;
-
-    border-radius: 6px;
-    background: ${(props) => props.theme['base-card']};
-    margin-top: 1rem;
-  }
 `
-export const Header = styled.header`
+export const Container = styled.div`
   display: flex;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
 
-  div {
-    display: flex;
-    flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
 
-    h1 {
-      color: ${(props) => props.theme['base-subtitle']};
-      ${fonts.textM}
-    }
-    p {
-      color: ${(props) => props.theme['base-text']};
-      ${fonts.textS}
-    }
-  }
+  border-radius: 6px;
+  background: ${(props) => props.theme['base-card']};
+  margin-top: 1rem;
 `
-export const AddressContainer = styled.section`
+
+export const AddressContainer = styled(Container)`
   header > svg {
     color: ${(props) => props.theme['yellow-dark']};
   }
 
-  div:last-child {
+  > div:last-child {
     display: grid;
     row-gap: 16px;
     column-gap: 12px;
@@ -68,14 +49,64 @@ export const AddressContainer = styled.section`
       'BAI CITY UF';
   }
 `
-export const PaymentFooter = styled.footer`
+export const PaymentFooter = styled(Container)`
   header > svg {
     color: ${(props) => props.theme.purple};
   }
 `
-export const CartSide = styled.aside`
+export const CartSide = styled(Container)`
   display: flex;
   width: 100%;
+`
+export const Header = styled.header`
+  display: flex;
+  gap: 0.5rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    > h1 {
+      color: ${(props) => props.theme['base-subtitle']};
+      ${fonts.textM}
+    }
+    > p {
+      color: ${(props) => props.theme['base-text']};
+      ${fonts.textS}
+    }
+  }
+`
+
+export const PaymentWrapper = styled(RadioGroup.Root)`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+`
+export const PaymentButton = styled(RadioGroup.Item)`
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1 0 0;
+  border-radius: 6px;
+  text-transform: uppercase;
+  background: ${(props) => props.theme['base-button']};
+  color: ${(props) => props.theme['base-text']};
+  ${fonts.buttonM}
+  border: 1px solid transparent;
+
+  svg {
+    color: ${(props) => props.theme.purple};
+  }
+  &:hover {
+    background: ${(props) => props.theme['base-hover']};
+  }
+  &[data-state='checked'] {
+    background: ${(props) => props.theme['purple-light']};
+    border: 1px solid ${(props) => props.theme.purple};
+  }
 `
 
 export const Input = styled.input`

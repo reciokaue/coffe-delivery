@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme.background};
     color: ${(props) => props.theme['base-text']};
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body, input, textarea, button {
@@ -27,4 +28,8 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 1130px;
   margin: 0 auto;
+
+  @media (max-width: 1130px) {
+    padding: 0 1rem;
+  }
 `

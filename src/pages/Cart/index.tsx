@@ -15,6 +15,8 @@ import {
   PaymentWrapper,
   PaymentButton,
 } from './styles'
+import { CoffeeRow } from '../../components/CoffeeRow'
+import { coffees } from '../../../data.json'
 
 export function Cart() {
   return (
@@ -62,7 +64,10 @@ export function Cart() {
       </div>
       <div>
         <h2>Cafés selecionados</h2>
-        <CartSide>a</CartSide>
+        <CartSide>
+          <CoffeeRow coffee={coffees[0]} />
+          <CoffeeRow coffee={coffees[1]} />
+        </CartSide>
       </div>
     </CartContainer>
   )

@@ -4,8 +4,9 @@ import * as RadioGroup from '@radix-ui/react-radio-group'
 
 export const CartContainer = styled.div`
   display: flex;
+  flex-direction: row;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 
   > div {
     display: flex;
@@ -24,7 +25,7 @@ export const Container = styled.div`
   align-items: flex-start;
 
   gap: 2rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
 
   border-radius: 6px;
   background: ${(props) => props.theme['base-card']};
@@ -57,6 +58,7 @@ export const PaymentFooter = styled(Container)`
 export const CartSide = styled(Container)`
   display: flex;
   width: 100%;
+  max-width: 28rem;
 `
 export const Header = styled.header`
   display: flex;

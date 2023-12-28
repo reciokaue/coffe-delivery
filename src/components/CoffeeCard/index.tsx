@@ -2,7 +2,7 @@ import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { Amount, CoffeeCardContainer, Footer, Label } from './styles'
 import { useState } from 'react'
 
-interface Coffee {
+export interface Coffee {
   id: string
   title: string
   description: string

@@ -6,6 +6,9 @@ export const CoffeeCardContainer = styled.div`
   align-items: center;
   gap: 1.25rem;
 
+  border-bottom: 1px solid ${(props) => props.theme['base-button']};
+  padding: 0 0 24px 0;
+
   > img {
     width: 4rem;
     height: 4rem;
@@ -46,6 +49,7 @@ export const Footer = styled.footer`
     line-height: 0;
     text-transform: uppercase;
     background: ${(props) => props.theme['base-button']};
+    color: ${(props) => props.theme['base-text']};
 
     &:hover {
       background: ${(props) => props.theme['base-hover']};

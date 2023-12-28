@@ -14,9 +14,11 @@ import {
   Input,
   PaymentWrapper,
   PaymentButton,
+  Details,
 } from './styles'
 import { CoffeeRow } from '../../components/CoffeeRow'
 import { coffees } from '../../../data.json'
+import { priceFormatter } from '../../utils/formatter'
 
 export function Cart() {
   return (
@@ -68,6 +70,21 @@ export function Cart() {
           <CoffeeRow coffee={coffees[0]} />
           <CoffeeRow coffee={coffees[1]} />
         </CartSide>
+        <Details>
+          <div>
+            <p>Total de itens</p>
+            <span>{priceFormatter(29.7)}</span>
+          </div>
+          <div>
+            <p>Entrega</p>
+            <span>{priceFormatter(3.5)}</span>
+          </div>
+          <div>
+            <h1>Total</h1>
+            <h1>{priceFormatter(33.2)}</h1>
+          </div>
+          <button>Confirmar pedido</button>
+        </Details>
       </div>
     </CartContainer>
   )

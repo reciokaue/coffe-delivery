@@ -1,6 +1,7 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
 import { Amount, CoffeeCardContainer, Footer } from './styles'
 import { useState } from 'react'
+import { priceFormatter } from '../../utils/formatter'
 
 export interface Coffee {
   id: string
@@ -41,7 +42,7 @@ export function CoffeeRow({ coffee }: CoffeeCardProps) {
           </button>
         </Footer>
       </div>
-      <strong>R$ {coffee.price}</strong>
+      <strong>{priceFormatter(coffee.price)}</strong>
     </CoffeeCardContainer>
   )
 }

@@ -59,6 +59,7 @@ export const CartSide = styled(Container)`
   display: flex;
   width: 100%;
   max-width: 28rem;
+  border-radius: 6px 44px 0 0;
 `
 export const Header = styled.header`
   display: flex;
@@ -108,6 +109,47 @@ export const PaymentButton = styled(RadioGroup.Item)`
   &[data-state='checked'] {
     background: ${(props) => props.theme['purple-light']};
     border: 1px solid ${(props) => props.theme.purple};
+  }
+`
+export const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 40px;
+  align-items: flex-start;
+  gap: 15px;
+
+  border-radius: 0 0 6px 44px;
+  background: var(--Base-Card, #f3f2f2);
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    p,
+    span {
+      color: ${(props) => props.theme['base-text']};
+      ${fonts.textS}
+    }
+    h1 {
+      color: ${(props) => props.theme['base-subtitle']};
+      ${fonts.textL}
+      font-weight: bold;
+    }
+  }
+  > button {
+    display: flex;
+    padding: 12px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 6px;
+    background: var(--Brand-Yellow, #dbac2c);
+    color: var(--Base-White, #fff);
+    margin-top: calc(24 - 15);
+    ${fonts.buttonG}
   }
 `
 
